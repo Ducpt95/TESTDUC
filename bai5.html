@@ -36,7 +36,7 @@
              let localList = localStorage.getItem('list')?JSON.parse(localStorage.getItem('list')):[]
              let deleteItem = prompt("Tên nhân viên muốn xóa");
              for (let i=0;i<localList.length;i++){
-                if(localList[i]==deleteItem){
+                if(localList[i].toUpperCase()==deleteItem.toUpperCase()){
                     localList.splice(i,1)
                 }
              }
