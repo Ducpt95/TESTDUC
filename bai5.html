@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+</head>
+<body>
+    <button onclick="checkName()">Tìm tên nhân viên</button>
+    <button onclick="deleteList()">Xóa nhân viên</button>
+    <script>
+            var arr = ["Tom","John","Jason"]
+            localStorage.setItem("list",JSON.stringify(arr))
+            function checkName(){
+                let flag = false;
+                let a = prompt("Tìm tên nhân viên");
+                for(let i=0;i<arr.length;i++){
+                    if(arr[i]==a){
+                        flag = true;
+                        break;
+                        
+                    } else{
+                        flag = false
+                    }
+                }
+                if(flag){
+                    alert("Có nhân viên này trong danh sách")
+                } else{
+                    alert("Không có nhân viên này trong danh sách")
+                }
+            }
+
+            function deleteList(){
+             alert("Có nhân viên Tom, Jason, John. Bạn muốn xóa ai?")
+             let localList = localStorage.getItem('list')?JSON.parse(localStorage.getItem('list')):[]
+             let deleteItem = prompt("Tên nhân viên muốn xóa");
+             for (let i=0;i<localList.length;i++){
+                if(localList[i]==deleteItem){
+                    localList.splice(i,1)
+                }
+             }
+             localStorage.setItem("list",JSON.stringify(localList))
+             alert("Nhân viên đã xóa, mở Local Storage để check")
+            }
+           
+            
+
+    </script>
+</body>
+</html>

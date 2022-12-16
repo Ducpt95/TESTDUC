@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="checkDay()">
+    <script>
+      function checkDay() {
+        let date = +prompt("Enter date");
+        let month = +prompt("Enter month");
+        let year = +prompt("Enter year");
+        if (
+          (year % 4 == 0 && year % 100 != 0) ||
+          (year % 100 == 0 && year % 400 == 0)
+        ) {
+          if (
+            month == 1 ||
+            month == 3 ||
+            month == 5 ||
+            month == 7 ||
+            month == 8 ||
+            month == 10 ||
+            month == 12
+          ) {
+            if (date <= 31 && date > 0) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 31) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 31 && month != 12) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              } else if (date == 31 && month == 12) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + 1 + "/" + (year + 1)
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            if (date <= 30 && date > 0) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 30) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 30) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else if (month == 2) {
+            if (date > 0 && date <= 29) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 29) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 29) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else {
+            alert("Tháng Không Hợp Lệ");
+          }
+        } else {
+          if (
+            month == 1 ||
+            month == 3 ||
+            month == 5 ||
+            month == 7 ||
+            month == 8 ||
+            month == 10 ||
+            month == 12
+          ) {
+            if (date <= 31 && date > 0) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 31) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 31 && month != 12) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              } else if (date == 31 && month == 12) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + 1 + "/" + (year + 1)
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            if (date <= 30 && date > 0) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 30) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 30) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else if (month == 2) {
+            if (date > 0 && date <= 28) {
+              alert("Ngày Hợp Lệ");
+              if (date > 0 && date < 28) {
+                alert(
+                  "Ngày tiếp theo là ngày " +
+                    (date + 1) +
+                    "/" +
+                    month +
+                    "/" +
+                    year
+                );
+              } else if (date == 28) {
+                alert(
+                  "Ngày tiếp theo là ngày " + 1 + "/" + (month + 1) + "/" + year
+                );
+              }
+            } else {
+              alert("Ngày Không Hợp Lệ");
+            }
+          } else {
+            alert("Tháng Không Hợp Lệ");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
